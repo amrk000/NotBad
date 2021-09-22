@@ -1,30 +1,29 @@
 <div align="center">
-<img src="https://user-images.githubusercontent.com/63168118/133911171-89e7a4ef-9ceb-4208-916e-93125756ba97.jpg" />
-<h3>Get News Around the world in 15 countries with 8 languages and 7 categories. </h3>
+<img src="https://user-images.githubusercontent.com/63168118/134414229-d5c400bc-6d66-4a91-89d2-4e780a3737a8.jpg" />
+<h3>It's NotBad NotePad android app which supports html text formatting in .txt files</h3>
 </div>
 
 </br>
 
 <h2>Features:</h2>
 <ul>
-<li>Get Latest News Headlines</li>
-<li>Read & Share news you like</li>
-<li>See news in multiple languages & countries</li>
-<li>Filter news to match your interrests using categories</li>
+<li>Simple UI notepad app</li>
+<li>8 Text formatting options</li>
+<li>9 Foreground colors</li>
+<li>9 Highlight colors</li>
 </ul>
 
 <h2>Implementation Highlights:</h2>
 <ul>
-<li>Rest API: newsapi.org</li>
-<li>Fetched & Parsed data with Retrofit + Gson</li>
-<li>Infinity Scrolling RecyclerView</li>
-<li>Network Checker BoradcastReciever</li>
-<li>Using & Handling WebView</li>
-<li>UI Components: Chips, BottomSheet, RecyclerView, ListView</li>
+<li>Handling Android files read/write to storage</li>
+<li>Spanned string class effects</li>
+<li>Importing / Exporting spanned text</li>
+<li>Editing Html tags using Jsoup Library</li>
+<li>Solved Problem: Html.fromHtml() / Html.toHtml() can't read size effect</li>
 </ul>
 
   </br></br>
   <div align="center">
-  <h2><a href="https://github.com/amrk000/NewsLand/files/7190780/NewsLand.zip">Download App</a></h2>
+  <h2><a href="https://github.com/amrk000/NotBad/files/7213519/NotBad.zip">Download App</a></h2>
   <p>APK File</p>
   </div>
