@@ -19,7 +19,7 @@
 <li>Spanned string class effects</li>
 <li>Importing / Exporting spanned text</li>
 <li>Editing Html tags using Jsoup Library</li>
-<li>Solved Problem: Html.fromHtml() / Html.toHtml() can't read size effect</li>
+<li>Solved Problem: Html.fromHtml() / Html.toHtml() can't read font size effects</li>
 </ul>
 
   </br></br>
