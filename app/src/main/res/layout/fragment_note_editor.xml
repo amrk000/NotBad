@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="12dp"
+    tools:context=".NoteEditor">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/edit_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/note_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorPrimary"
+        android:ems="10"
+        android:hint="Title"
+        android:inputType="textPersonName"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_mode" />
+
+    <EditText
+        android:id="@+id/note_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorPrimary"
+        android:gravity="top"
+        android:hint="Write Something ..."
+        android:inputType="textMultiLine"
+        android:overScrollMode="always"
+        android:scrollbars="vertical"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/formatMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/note_title"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <HorizontalScrollView
+        android:id="@+id/formatMenu"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:alpha="0.8"
+        android:background="@drawable/backshape"
+        android:backgroundTint="@color/colorAccent"
+        android:backgroundTintMode="src_over"
+        android:fadingEdge="horizontal"
+        android:fadingEdgeLength="20dp"
+        android:isScrollContainer="true"
+        android:paddingLeft="2dp"
+        android:paddingTop="5dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="5dp"
+        android:requiresFadingEdge="horizontal"
+        android:scrollbarSize="0dp"
+        android:scrollbars="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingRight="60dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:paddingRight="3dp"
+                android:text="Format"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/editor_size_increase"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="monospace"
+                android:text="A⁺"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/editor_size_decrease"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="monospace"
+                android:text="A⁻"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/editor_bold"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/itemshape"
+                android:fontFamily="monospace"
+                android:text="B"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/editor_italic"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="monospace"
+                android:text="I"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/editor_underline"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="monospace"
+                android:text="u̲"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/editor_strikethrough"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="monospace"
+                android:text="S̶"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/editor_superscript"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="monospace"
+                android:text="xⁿ"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/editor_subscript"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="monospace"
+                android:text="xₙ"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:paddingRight="3dp"
+                android:text="Text Color"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/editor_red"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="●"
+                android:textAllCaps="true"
+                android:textColor="#FF0000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/editor_orange"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="●"
+                android:textAllCaps="true"
+                android:textColor="#FF9800"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/editor_yellow"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="●"
+                android:textAllCaps="true"
+                android:textColor="#FFE500"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/editor_green"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="●"
+                android:textAllCaps="true"
+                android:textColor="#00CA08"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/editor_cyan"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="●"
+                android:textAllCaps="true"
+                android:textColor="#038FFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/editor_blue"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="●"
+                android:textAllCaps="true"
+                android:textColor="#0023E6"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/editor_purble"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="●"
+                android:textAllCaps="true"
+                android:textColor="#C301E4"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/editor_black"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="●"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/editor_white"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="●"
+                android:textAllCaps="true"
+                android:textColor="#E6E6E6"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:paddingRight="3dp"
+                android:text="Highlight"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/editor_hl_red"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="◐"
+                android:textAllCaps="true"
+                android:textColor="#FF0000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/editor_hl_orange"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="◐"
+                android:textAllCaps="true"
+                android:textColor="#FF9800"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/editor_hl_yellow"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="◐"
+                android:textAllCaps="true"
+                android:textColor="#FFE500"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/editor_hl_green"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="◐"
+                android:textAllCaps="true"
+                android:textColor="#00CA08"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/editor_hl_cyan"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="◐"
+                android:textAllCaps="true"
+                android:textColor="#038FFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/editor_hl_blue"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="◐"
+                android:textAllCaps="true"
+                android:textColor="#0023E6"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/editor_hl_purple"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="◐"
+                android:textAllCaps="true"
+                android:textColor="#C301E4"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/editor_hl_black"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="◐"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/editor_hl_white"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemshape"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="◐"
+                android:textAllCaps="true"
+                android:textColor="#E6E6E6"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
